@@ -11,12 +11,17 @@ function Contact() {
       email: "",
       phone: "",
     },
+    //Step:2 add  onSubmit: values => {alert(JSON.stringify(values, null, 2));
+    onSubmit: (values) => {
+      //alert(JSON.stringify(values, null, 2));
+      console.log(values);
+    },
   });
   //Step:2 Add onChange = { formik.handleChange } and value = { formik.values.lastName } in form fields
 
-  console.log(formik.values);
+  //console.log(formik.values);
 
-  //Step: add onSubmit={formik.handleSubmit}
+  //Step:3 add onSubmit={formik.handleSubmit} on the form tag
   return (
     <section className="main_formik">
       <div className="container">
