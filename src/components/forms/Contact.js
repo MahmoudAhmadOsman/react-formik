@@ -1,4 +1,5 @@
 import React from "react";
+import "./Contact.css";
 import { useFormik } from "formik"; // import Formik Hook
 
 function Contact() {
@@ -13,7 +14,7 @@ function Contact() {
     },
     //Step:2 add  onSubmit: values => {alert(JSON.stringify(values, null, 2));
     onSubmit: (values) => {
-      //alert(JSON.stringify(values, null, 2));
+      alert(JSON.stringify(values));
       console.log(values);
     },
   });
@@ -63,6 +64,9 @@ function Contact() {
             </form>
           </div>
         </div>
+        <p className="copy-right">
+          &copy; Copyright 2020. All Rights Reserved. Mahmoud Osman
+        </p>
       </div>
     </section>
   );
