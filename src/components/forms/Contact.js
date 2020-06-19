@@ -17,10 +17,37 @@ function Contact() {
       alert(JSON.stringify(values));
       console.log(values);
     },
+    //3rd argument to useFormik function
+    validate: (values) => {
+      //values.name , values.email, values.phone because values func is object
+      //Errors is similar to values func: errors.name, errors.email, errors.phone
+      //errors.name = 'This field is required'
+      //Define func body
+      let errors = {};
+
+      //Check if fields are empty or no
+      if (!values.name) {
+        errors.name = "Name is required!";
+      }
+      if (!values.email) {
+        errors.email = "Email is required!";
+      } else if (
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+      ) {
+        errors.email = "Invalid email address!";
+      }
+
+      if (!values.phone) {
+        errors.phone = "Phone is required!";
+      }
+
+      return errors;
+    },
   });
   //Step:2 Add onChange = { formik.handleChange } and value = { formik.values.lastName } in form fields
 
   //console.log(formik.values);
+  console.log("form errors", formik.errors);
 
   //Step:3 add onSubmit={formik.handleSubmit} on the form tag
   return (
@@ -39,6 +66,10 @@ function Contact() {
                 onChange={formik.handleChange}
                 value={formik.values.name}
               />
+              {formik.errors.name ? (
+                <div className="alert alert-danger">{formik.errors.name}</div>
+              ) : null}
+
               <label htmlFor="email">Email Address</label>
               <input
                 type="text"
@@ -48,6 +79,9 @@ function Contact() {
                 onChange={formik.handleChange}
                 value={formik.values.email}
               />
+              {formik.errors.email ? (
+                <div className="alert alert-danger">{formik.errors.email}</div>
+              ) : null}
               <label htmlFor="phone">Phone Number</label>
               <input
                 type="text"
@@ -57,6 +91,10 @@ function Contact() {
                 onChange={formik.handleChange}
                 value={formik.values.phone}
               />
+
+              {formik.errors.phone ? (
+                <div className="alert alert-danger">{formik.errors.phone}</div>
+              ) : null}
               <br />
               <button type="submit" className="btn btn-primary">
                 <b>SUBMIT</b>

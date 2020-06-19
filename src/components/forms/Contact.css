@@ -1,6 +1,6 @@
 .main_formik {
-  max-width: 850px;
-  height: 100vh;
+  max-width: 100%;
+  height: auto;
   margin: auto;
   background-color: #fff;
 }
