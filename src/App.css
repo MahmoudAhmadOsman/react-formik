@@ -1,0 +1,9 @@
+body {
+  background-color: #ccc;
+}
+.main_formik {
+  max-width: 850px;
+  height: 100vh;
+  margin: auto;
+  background-color: #fff;
+}
