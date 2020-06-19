@@ -1,3 +1,11 @@
 - npm add formik
 
-rfce- create functional component
+rfce- create func component
+
+- onBlur={formik.handleBlur} -> (helper func) to show only if input fields are visited or touched
+- form.touched.email &&
+
+
+-  value={formik.values.name} -> get form values
+
+-  onChange={formik.handleChange} -> helper func

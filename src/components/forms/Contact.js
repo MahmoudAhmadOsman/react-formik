@@ -64,9 +64,10 @@ function Contact() {
                 name="name"
                 id="name"
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.name}
               />
-              {formik.errors.name ? (
+              {formik.touched.name && formik.errors.name ? (
                 <div className="alert alert-danger">{formik.errors.name}</div>
               ) : null}
 
@@ -77,9 +78,10 @@ function Contact() {
                 name="email"
                 id="email"
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.email}
               />
-              {formik.errors.email ? (
+              {formik.touched.email && formik.errors.email ? (
                 <div className="alert alert-danger">{formik.errors.email}</div>
               ) : null}
               <label htmlFor="phone">Phone Number</label>
@@ -89,10 +91,11 @@ function Contact() {
                 name="phone"
                 id="phone"
                 onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
                 value={formik.values.phone}
               />
 
-              {formik.errors.phone ? (
+              {formik.touched.phone && formik.errors.phone ? (
                 <div className="alert alert-danger">{formik.errors.phone}</div>
               ) : null}
               <br />
