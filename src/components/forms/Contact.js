@@ -58,9 +58,9 @@ function Contact() {
     <section className="main_formik">
       <div className="container">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-12">
             <form onSubmit={formik.handleSubmit}>
-              <h1>Contact us</h1> <hr />
+              <h1 className="text-primary">Contact Us</h1> <hr />
               <label htmlFor="name">Full Name</label>
               <input
                 type="text"
@@ -101,7 +101,7 @@ function Contact() {
                 <div className="text-danger">{formik.errors.phone}</div>
               ) : null}
               <br />
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary btn-block">
                 <b>SUBMIT</b>
               </button>
             </form>
