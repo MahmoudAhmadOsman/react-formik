@@ -58,7 +58,7 @@ function Contact() {
     <section className="main_formik">
       <div className="container">
         <div className="row">
-          <div className="col-md-8 col-md-offset-2">
+          <div className="col-md-8">
             <form onSubmit={formik.handleSubmit}>
               <h1>Contact us</h1> <hr />
               <label htmlFor="name">Full Name</label>
@@ -108,7 +108,8 @@ function Contact() {
           </div>
         </div>
         <p className="copy-right">
-          &copy; Copyright 2020. All Rights Reserved. Mahmoud Osman
+          &copy; Copyright {new Date().getFullYear()}. All Rights Reserved.
+          Mahmoud Osman
         </p>
       </div>
     </section>
