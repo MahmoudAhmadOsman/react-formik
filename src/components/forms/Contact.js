@@ -68,7 +68,7 @@ function Contact() {
                 value={formik.values.name}
               />
               {formik.touched.name && formik.errors.name ? (
-                <div className="alert alert-danger">{formik.errors.name}</div>
+                <div className="text-danger">{formik.errors.name}</div>
               ) : null}
 
               <label htmlFor="email">Email Address</label>
@@ -82,7 +82,7 @@ function Contact() {
                 value={formik.values.email}
               />
               {formik.touched.email && formik.errors.email ? (
-                <div className="alert alert-danger">{formik.errors.email}</div>
+                <div className="text-danger">{formik.errors.email}</div>
               ) : null}
               <label htmlFor="phone">Phone Number</label>
               <input
@@ -96,7 +96,7 @@ function Contact() {
               />
 
               {formik.touched.phone && formik.errors.phone ? (
-                <div className="alert alert-danger">{formik.errors.phone}</div>
+                <div className="text-danger">{formik.errors.phone}</div>
               ) : null}
               <br />
               <button type="submit" className="btn btn-primary">
