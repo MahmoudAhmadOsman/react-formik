@@ -4,6 +4,9 @@
   margin: auto;
   background-color: #fff;
 }
+.main_formik hr {
+  margin-bottom: 40px;
+}
 
 .copy-right {
   width: 100%;

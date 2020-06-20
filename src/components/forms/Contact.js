@@ -58,9 +58,9 @@ function Contact() {
     <section className="main_formik">
       <div className="container">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-8 col-md-offset-2">
             <form onSubmit={formik.handleSubmit}>
-              <h1>Contact us</h1>
+              <h1>Contact us</h1> <hr />
               <label htmlFor="name">Full Name</label>
               <input
                 type="text"
@@ -74,7 +74,6 @@ function Contact() {
               {formik.touched.name && formik.errors.name ? (
                 <div className="text-danger">{formik.errors.name}</div>
               ) : null}
-
               <label htmlFor="email">Email Address</label>
               <input
                 type="text"
@@ -98,7 +97,6 @@ function Contact() {
                 onBlur={formik.handleBlur}
                 value={formik.values.phone}
               />
-
               {formik.touched.phone && formik.errors.phone ? (
                 <div className="text-danger">{formik.errors.phone}</div>
               ) : null}
