@@ -25,9 +25,11 @@ function Contact() {
       //Define func body
       let errors = {};
 
-      //Check if fields are empty or no
+      //Check if fields are empty or not
       if (!values.name) {
         errors.name = "Name is required!";
+      } else if (values.name.length < 3) {
+        errors.name = "Name must be more than 3 characters!";
       }
       if (!values.email) {
         errors.email = "Email is required!";
@@ -39,6 +41,8 @@ function Contact() {
 
       if (!values.phone) {
         errors.phone = "Phone is required!";
+      } else if (values.phone.length < 10) {
+        errors.phone = "Phone must be not less than 10 digit numbers!";
       }
 
       return errors;
