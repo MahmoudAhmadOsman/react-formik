@@ -112,12 +112,12 @@ function Contact() {
         </div>
 
         <p className="copy-right">
-          <p>
+          <div>
             Download the design:
             <a href="./react-formic-design.png" download>
-              Click Here
+              &nbsp; Click Here
             </a>
-          </p>
+          </div>
           &copy; Copyright {new Date().getFullYear()}. All Rights Reserved.
           Mahmoud Osman
         </p>
