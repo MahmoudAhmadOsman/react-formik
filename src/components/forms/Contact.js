@@ -42,7 +42,7 @@ function Contact() {
       if (!values.phone) {
         errors.phone = "Phone is required!";
       } else if (values.phone.length < 10) {
-        errors.phone = "Phone must be not less than 10 digit numbers!";
+        errors.phone = "Phone number should be at least 10 digit numbers!";
       }
 
       return errors;
@@ -67,6 +67,7 @@ function Contact() {
                 className="form-control"
                 name="name"
                 id="name"
+                placeholder="Enter your name"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.name}
@@ -80,6 +81,7 @@ function Contact() {
                 className="form-control"
                 name="email"
                 id="email"
+                placeholder="Enter your email address"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
@@ -93,6 +95,7 @@ function Contact() {
                 className="form-control"
                 name="phone"
                 id="phone"
+                placeholder="Enter your phone number ex. (555)-555-5555"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.phone}
