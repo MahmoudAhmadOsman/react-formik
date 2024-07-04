@@ -1,16 +1,15 @@
 ## Project
-
-This project is built Reactjs and React Formik
+This project is built with React.js and React Formik.
 
 ## Clone
 
-To clone this project use this command
+To clone this project, use the following command:
 
 ```bash
 $ git clone https://github.com/MahmoudAhmadOsman/react-formik.git
 ```
 
-## Then Install All Dependencies
+## Install Dependencies
 
 ```bash
 $ npm install --save
@@ -18,15 +17,15 @@ $ npm install --save
 
 ## Note:
 
-This project is live on github pages. So, please visit the link below and see the demo app.
+This project is live on GitHub Pages. Visit the link below to see the demo app:
 
 github-pages Link: [react-formik](https://mahmoudahmadosman.github.io/react-formik/)
 
 ## Contributing
 
-Please, feel free to contrubute to this and correct me if you see anything wrong about this project or if you have any sugguestions that would also welcomed.
+Feel free to contribute to this project. If you find any issues or have suggestions for improvement, your input is welcome.
 
 ### My Website
 
-Please, visit my website
+Please, Visit my website:
 [mahmoudosman.com](https://www.mahmoudosman.com)
